@@ -1,9 +1,9 @@
 @import 'tailwindcss';
 
 body {
-    @apply container max-w-full mx-auto bg-white text-black dark:bg-lime-800/60 dark:text-yellow-100
+    @apply container max-w-full mx-auto bg-white text-black dark:bg-yellow-500/20 dark:text-green-900
 }
 
 hr {
-  @apply my-8 border-gray-200 dark:border-gray-800
+  @apply my-4 border-gray-200 dark:border-gray-800
 }

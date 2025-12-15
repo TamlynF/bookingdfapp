@@ -124,14 +124,14 @@ async function App() {
   // }
 
   return (
-    <div className="min-h-screen bg-green-950 text-green-200 font-sans selection:bg-green-500/30">
+    <div className="min-h-screen bg-yellow-500/20 text-green-900 font-sans selection:bg-amber-500/80">
       {/* Background Decorative Elements */}
-      <div className="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+      <div className="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0 border border-blue-700">
         <div className="absolute top-[-10%] right-[-5%] w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-[-10%] left-[-5%] w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto p-4 md:p-8 grid md:grid-cols-2 gap-12 items-center min-h-screen">
+      <div className="relative z-10 max-w-8xl mx-auto p-4 md:p-10 grid md:grid-cols-2 gap-12 items-center">
         
         {/* Left Side: Event Info */}
         <BookingEventInformation event={event} />

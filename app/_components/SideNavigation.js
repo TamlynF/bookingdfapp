@@ -84,7 +84,7 @@ function SideNavigation() {
               <li key={link.name}>
                 <button
                   onClick={() => setIsSettingsOpen(!isSettingsOpen)}
-                  className={`w-full py-2 px-2 hover:bg-amber-900 hover:text-amber-100 transition-colors flex items-center justify-between font-semibold text-amber-100 ${isChildActive || isSettingsOpen ? "bg-amber-900/40" : ""
+                  className={`w-full py-2 px-2 hover:bg-amber-900 hover:text-amber-100 transition-colors flex items-center justify-between font-semibold text-green-800 ${isChildActive || isSettingsOpen ? "bg-amber-900/20" : ""
                     }`}
                 >
                   <div className="flex items-center gap-2">
@@ -100,12 +100,12 @@ function SideNavigation() {
 
                 {/* Render Dropdown Items */}
                 {isSettingsOpen && (
-                  <ul className="bg-yellow-950/20 flex flex-col gap-1 py-1">
+                  <ul className="bg-yellow-500/10 flex flex-col gap-1 py-1">
                     {link.children.map((child) => (
                       <li key={child.name}>
                         <Link
                           href={child.href}
-                          className={`py-2 pl-5 pr-1 hover:bg-amber-900 hover:text-amber-100 transition-colors flex items-center gap-1 text-base text-amber-100 ${isActive(child.href) ? "bg-amber-700 text-amber-100" : ""
+                          className={`py-2 pl-5 pr-1 hover:bg-amber-900 hover:text-amber-100 transition-colors flex items-center gap-1 text-base  ${isActive(child.href) ? "bg-orange-700/80 text-amber-100" : "text-green-800"
                             }`}
                         >
                           {child.icon}
@@ -123,7 +123,7 @@ function SideNavigation() {
           return (
             <li key={link.name}>
               <Link
-                className={`py-2 px-2 hover:bg-amber-900 hover:text-amber-100 transition-colors flex items-center gap-2 font-semibold text-amber-100 ${isActive(link.href) ? "bg-amber-700" : ""
+                className={`py-2 px-2 hover:bg-amber-900 hover:text-amber-100 transition-colors flex items-center gap-2 font-semibold  ${isActive(link.href) ? "bg-orange-700/80 text-amber-100" : "text-green-800"
                   }`}
                 href={link.href}
               >

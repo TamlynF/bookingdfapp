@@ -108,17 +108,17 @@ function BookingQuizForm() {
   }
 
     return (
-    <div className="bg-emerald-900/80 backdrop-blur-xl p-6 md:p-8 rounded-2xl border border-emerald-800 shadow-2xl animate-in slide-in-from-right duration-700 delay-100">
-          <div className="mb-6">
-            <h2 className="text-2xl font-bold text-white mb-1">Reserve a Table</h2>
-            <p className="text-emerald-400 text-sm">Limited spots available. Book now to secure your place.</p>
+    <div className="bg-orange-800/10 backdrop-blur-xl p-4 md:py-8 md:px-12 ml-15 mr-16 rounded-2xl border border-emerald-800 shadow-2xl animate-in slide-in-from-right duration-700 delay-100">
+          <div className="mb-4">
+            <h2 className="text-2xl text-center font-bold text-green-950/70 mb-1">Reserve a Table</h2>
+            <p className="text-emerald-800 text-center text-sm">Limited spots available. Book now to secure your place.</p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-2">
             
             {/* Quiz Date */}
             <div className="space-y-1.5">
-              <label htmlFor="quizDate" className="text-sm font-medium text-emerald-300">Select Date</label>
+              <label htmlFor="quizDate" className="text-sm font-medium text-green-950">Select Date</label>
               <div className="relative">
                 <input
                   required
@@ -127,15 +127,15 @@ function BookingQuizForm() {
                   name="quizDate"
                   value={formData.quizDate}
                   onChange={handleChange}
-                  className="w-full bg-emerald-950 border border-emerald-700 rounded-lg px-4 py-3 text-emerald-100 placeholder-emerald-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all scheme-dark"
+                  className="w-full bg-orange-950/10 border border-emerald-700 rounded-lg px-4 py-3 text-emerald-900 placeholder-emerald-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all scheme-dark"
                 />
-                <Calendar className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-emerald-500 pointer-events-none" />
+                <Calendar className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-emerald-900 pointer-events-none" />
               </div>
             </div>
 
             {/* Full Name */}
             <div className="space-y-1.5">
-              <label htmlFor="fullName" className="text-sm font-medium text-emerald-300">Leader&apos;s Name</label>
+              <label htmlFor="fullName" className="text-sm font-medium text-green-950">Leader&apos;s Name</label>
               <input
                 required
                 type="text"
@@ -144,13 +144,13 @@ function BookingQuizForm() {
                 placeholder="John Doe"
                 value={formData.fullName}
                 onChange={handleChange}
-                className="w-full bg-emerald-950 border border-emerald-700 rounded-lg px-4 py-3 text-emerald-100 placeholder-emerald-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                className="w-full bg-orange-950/10 border border-emerald-700 rounded-lg px-4 py-3 text-emerald-900 placeholder-emerald-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
               />
             </div>
 
             {/* Email */}
             <div className="space-y-1.5">
-              <label htmlFor="email" className="text-sm font-medium text-emerald-300">Email Address</label>
+              <label htmlFor="email" className="text-sm font-medium text-green-950">Email Address</label>
               <input
                 required
                 type="email"
@@ -159,20 +159,20 @@ function BookingQuizForm() {
                 placeholder="john@example.com"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full bg-emerald-950 border border-emerald-700 rounded-lg px-4 py-3 text-emerald-100 placeholder-emerald-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                className="w-full bg-orange-950/10 border border-emerald-700 rounded-lg px-4 py-3 text-emerald-900 placeholder-emerald-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
               />
             </div>
 
             {/* Phone Number Group */}
             <div className="space-y-1.5">
-              <label className="text-sm font-medium text-emerald-300">Phone Number</label>
+              <label className="text-sm font-medium text-green-950">Phone Number</label>
               <div className="flex gap-2">
                 <div className="relative w-1/3">
                   <select
                     name="countryCode"
                     value={formData.countryCode}
                     onChange={handleChange}
-                    className="w-full appearance-none bg-emerald-950 border border-emerald-700 rounded-lg pl-4 pr-8 py-3 text-emerald-100 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent cursor-pointer"
+                    className="w-full appearance-none bg-orange-950/10 border border-emerald-700 rounded-lg pl-4 pr-8 py-3 text-emerald-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent cursor-pointer"
                   >
                     {COUNTRY_CODES.map((item) => (
                       <option key={item.code} value={item.code}>
@@ -189,7 +189,7 @@ function BookingQuizForm() {
                   placeholder="555-0123"
                   value={formData.phoneNumber}
                   onChange={handleChange}
-                  className="w-2/3 bg-emerald-950 border border-emerald-700 rounded-lg px-4 py-3 text-emerald-100 placeholder-emerald-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                  className="w-2/3 bg-orange-950/10 border border-emerald-700 rounded-lg px-4 py-3 text-emerald-900 placeholder-emerald-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
                 />
               </div>
             </div>
@@ -197,7 +197,7 @@ function BookingQuizForm() {
             {/* Team Info Row */}
             <div className="grid grid-cols-3 gap-4">
               <div className="col-span-2 space-y-1.5">
-                <label htmlFor="teamName" className="text-sm font-medium text-emerald-300">Team Name</label>
+                <label htmlFor="teamName" className="text-sm font-medium text-green-950">Team Name</label>
                 <input
                   required
                   type="text"
@@ -206,11 +206,11 @@ function BookingQuizForm() {
                   placeholder="The Quizzards"
                   value={formData.teamName}
                   onChange={handleChange}
-                  className="w-full bg-emerald-950 border border-emerald-700 rounded-lg px-4 py-3 text-emerald-100 placeholder-emerald-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                  className="w-full bg-orange-950/10 border border-emerald-700 rounded-lg px-4 py-3 text-emerald-900 placeholder-emerald-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
                 />
               </div>
               <div className="col-span-1 space-y-1.5">
-                <label htmlFor="teamSize" className="text-sm font-medium text-emerald-300">Team Size</label>
+                <label htmlFor="teamSize" className="text-sm font-medium text-green-950">Team Size</label>
                 <input
                   required
                   type="number"
@@ -220,7 +220,7 @@ function BookingQuizForm() {
                   max="10"
                   value={formData.teamSize}
                   onChange={handleChange}
-                  className="w-full bg-emerald-950 border border-emerald-700 rounded-lg px-4 py-3 text-emerald-100 placeholder-emerald-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                  className="w-full bg-orange-950/10 border border-emerald-700 rounded-lg px-4 py-3 text-emerald-900 placeholder-emerald-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
                 />
               </div>
             </div>
@@ -252,7 +252,7 @@ function BookingQuizForm() {
               )}
             </button>
             
-            <p className="text-center text-xs text-emerald-500 mt-4">
+            <p className="text-center text-xs text-emerald-900 mt-4">
               By booking, you agree to our Terms & Privacy Policy.
             </p>
           </form>

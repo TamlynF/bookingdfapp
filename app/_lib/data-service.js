@@ -55,7 +55,30 @@ export const getToday = function (options = {}) {
   export async function getEvents() {
     const { data, error } = await supabase
       .from('events')
-      .select('*, employees(full_name), event_types(type, sub_type)')
+      .select(`id, 
+        date, 
+        start_time, 
+        end_time, 
+        title, 
+        description, 
+        seating_required, 
+        payment_amount,
+        employees(full_name),
+        event_types(type, sub_type),
+        bookings(
+            id, 
+            group_name, 
+            group_size, 
+            total_amount, 
+            paid_amount, 
+            status,
+            contacts(full_name, email),
+            booking_table_mappings(
+                tables(name, max_capacity)
+            ),
+            booking_scores(score, is_winner)
+        )`
+      )
       .order('date', { ascending: true })
       .order('start_time', { ascending: true });
 

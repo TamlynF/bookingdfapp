@@ -48,20 +48,20 @@ async function BookingEventInformation({ event }) {
 
 
     return (
-        <div className="space-y-8 pr-0 md:pr-8 animate-in slide-in-from-left duration-700">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-300 text-sm font-medium">
+        <div className="space-y-6 px-4 pr-4 md:pr-16 ml-10 mr-10 animate-in slide-in-from-left duration-700">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-800/70 text-green-900 text-sm font-medium">
                 <Trophy className="w-4 h-4" />
                 <span>Weekly Championship Series</span>
             </div>
 
             <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight text-white">
                 Thursday <br />
-                <span className="text-transparent bg-clip-text bg-linear-to-r from-green-400 to-lime-400">
+                <span className="text-transparent bg-clip-text bg-linear-to-r from-green-900 to-orange-500">
                     {title}
                 </span>
             </h1>
 
-            <p className="text-lg text-emerald-400 leading-relaxed max-w-lg">
+            <p className="text-lg text-emerald-900 leading-relaxed max-w-lg">
                 {description}
             </p>
 
@@ -69,7 +69,7 @@ async function BookingEventInformation({ event }) {
                 {eventCards}
             </div>
 
-            <div className="flex gap-4 pt-4 text-sm text-green-500 font-medium uppercase tracking-wider">
+            <div className="flex gap-4 pt-4 text-sm text-green-900 font-medium uppercase tracking-wider">
                 <span className="flex items-center gap-1"><Brain className="w-4 h-4" /> Trivia</span>
                 <span className="w-1 h-1 bg-green-700 rounded-full self-center"></span>
                 <span className="flex items-center gap-1"><Music className="w-4 h-4" /> Music</span>
